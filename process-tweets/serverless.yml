@@ -3,6 +3,12 @@ service: SmartBotProcessTweet
 provider:
   name: aws
   runtime: python3.6
+  environment:
+    OPENAI_API_KEY: ${env:OPENAI_API_KEY}
+    TWITTER_CONSUMER_KEY: ${env:TWITTER_CONSUMER_KEY}
+    TWITTER_CONSUMER_SECRET: ${env:TWITTER_CONSUMER_SECRET}
+    TWITTER_ACCESS_TOKEN: ${env:TWITTER_ACCESS_TOKEN}
+    TWITTER_ACCESS_TOKEN_SECRET: ${env:TWITTER_ACCESS_TOKEN_SECRET}
 
 functions:
   SmartBotProcessTweet:
