@@ -12,5 +12,5 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-# @SmartBo69928874 -filter:replies
+# @SmartBotAI -(from:SmartBotAI)
 api.update_status("Bleep Bloop 🤖")
