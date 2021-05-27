@@ -4,6 +4,8 @@
 
 [@SmartBotAI](https://twitter.com/SmartBotAI) is an [OpenAI API](https://beta.openai.com/)-powered [GPT-3](https://en.wikipedia.org/wiki/GPT-3) Twitter bot. It will reply to tweets with a short prompt that mention @SmartBotAI with an "autocompleted" (AI-generated) follow up to the prompt.
 
+Created by [@macsj200](https://twitter.com/macsj200) [github](https://github.com/macsj200)
+
 ### Examples
 
 [Original tweet](https://twitter.com/macsj200/status/1397846950658052097):
@@ -37,3 +39,5 @@ Harry Dresden, Chicago's only professional wizard hit the battlefield. Well ever
 
 RAW: So when Thomas and one of Mab's mercs made me, I hit the streets to hunt down the demon. Killed it
 ```
+
+###
