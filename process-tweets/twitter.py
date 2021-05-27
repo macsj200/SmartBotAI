@@ -16,4 +16,7 @@ api = tweepy.API(auth)
 def replyToTweet(originalTweet, text):
   tweetId = originalTweet["id"]
   screenName = originalTweet["user"]["screen_name"]
-  api.update_status(f"@{screenName} {text}", tweetId)
+  print('Replying to', tweetId)
+  # api.update_status(f"@{screenName} {text}", tweetId)
+  api.update_status(status = text, in_reply_to_status_id = tweetId , auto_populate_reply_metadata=True)
+
