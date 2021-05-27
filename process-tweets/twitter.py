@@ -14,7 +14,7 @@ api = tweepy.API(auth)
 
 # @SmartBotAI -(from:SmartBotAI)
 def replyToTweet(originalTweet, text):
-  tweetId = originalTweet["id"]
+  tweetId = originalTweet["id_str"]
   screenName = originalTweet["user"]["screen_name"]
   print('Replying to', tweetId)
   # api.update_status(f"@{screenName} {text}", tweetId)
