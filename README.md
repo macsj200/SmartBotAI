@@ -46,4 +46,4 @@ The Twitter bot is all built on top of AWS Lambda. It uses [Tweepy](https://www.
 
 It uses `AWS Serverless Tweet Event Source` ([github link](https://github.com/wweiss/aws-serverless-tweet-event-source)) to poll a Twitter search query to get the set of new tweets that mention @SmartBotAI. This polling function runs once every 5 minutes.
 
-When a new tweet is picked up the polling function invokes a Serverless lambda function that calls the `openai` API with the tweet's prompt and posts an autocompleted response.
+When a new tweet is picked up the polling function invokes a [Serverless](https://www.serverless.com/) lambda function that calls the `openai` API with the tweet's prompt and posts an autocompleted response.
