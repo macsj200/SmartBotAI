@@ -13,5 +13,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 # @SmartBotAI -(from:SmartBotAI)
-def writeTweet(text):
-  api.update_status(text)
+def replyToTweet(originalTweet, text):
+  tweetId = originalTweet["id"]
+  screenName = originalTweet["user"]["screen_name"]
+  api.update_status(f"@{screenName} {text}", tweetId)
