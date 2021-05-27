@@ -13,8 +13,11 @@ def main(event, context):
 
         response = gpt3.getResponse(text)
 
-        print('Tweeting', response)
+        print('Response', response)
+        maxTweetLen = 280
+        truncatedResponse = response[0:maxTweetLen]
+        print('Truncated response', truncatedResponse)
 
-        twitter.replyToTweet(newTweet, response)
+        twitter.replyToTweet(newTweet, truncatedResponse)
 
     return True
