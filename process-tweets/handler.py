@@ -2,6 +2,7 @@ import twitter
 import gpt3
 
 def main(event, context):
+    print(event)
     for newTweet in event:
         text = newTweet['text']
         print('Processing', text)
