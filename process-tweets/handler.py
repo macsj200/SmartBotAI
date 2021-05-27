@@ -1,24 +1,14 @@
-import json
-
+import twitter
+import gpt3
 
 def hello(event, context):
-    body = {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "input": event
-    }
+    for newTweet in event:
+        print('Processing', newTweet.text)
 
-    response = {
-        "statusCode": 200,
-        "body": json.dumps(body)
-    }
+        response = gpt3.getResponse(newTweet.text)
 
-    return response
+        print('Tweeting', response)
 
-    # Use this code if you don't use the http event with the LAMBDA-PROXY
-    # integration
-    """
-    return {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "event": event
-    }
-    """
+        twitter.writeTweet(response)
+
+    return True

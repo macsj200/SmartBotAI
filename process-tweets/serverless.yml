@@ -1,11 +1,11 @@
-service: numpy-test
+service: SmartBotProcessTweet
 
 provider:
   name: aws
   runtime: python3.6
 
 functions:
-  numpy:
+  SmartBotProcessTweet:
     handler: handler.main
 
 plugins:

@@ -13,4 +13,5 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 # @SmartBotAI -(from:SmartBotAI)
-api.update_status("Bleep Bloop 🤖")
+def writeTweet(text):
+  api.update_status(text)
