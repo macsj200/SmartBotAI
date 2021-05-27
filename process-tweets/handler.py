@@ -3,9 +3,10 @@ import gpt3
 
 def main(event, context):
     for newTweet in event:
-        print('Processing', newTweet.text)
+        text = newTweet['text']
+        print('Processing', text)
 
-        response = gpt3.getResponse(newTweet.text)
+        response = gpt3.getResponse(text)
 
         print('Tweeting', response)
 
